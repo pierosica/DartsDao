@@ -12,10 +12,11 @@ import java.sql.SQLException;
  */
 public class DBConnect {
 
-	private static String url = "jdbc:mysql://localhost/darts?user=mysqluser&password=qwerty12 ";
-	
+	private static String url = "jdbc:mysql://localhost/darts?user=mysqluser&password=qwerty12";
+
 	/**
 	 * Restituisce una nuova connessione con i parametri che conosce
+	 * 
 	 * @return la nuova java.sql.Connection, oppure null se ci sono errori
 	 */
 	public static Connection getConnection() {
@@ -28,6 +29,5 @@ public class DBConnect {
 			e.printStackTrace();
 		}
 		return null;
-		
 	}
 }

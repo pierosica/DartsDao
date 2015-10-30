@@ -9,6 +9,12 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXMLLoader;
 
+/**
+ * In questo main (e nelle classi correlate {@link PartitaModel}, {@link Giocatore} e {@link MainViewController}) è stato commentato in verde quello che ho potuto riassumere dal corso
+ * di Fulvio Corno (lez.13 - TdP 2014/2015)
+ * @author Piero Sica
+ *
+ */
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {

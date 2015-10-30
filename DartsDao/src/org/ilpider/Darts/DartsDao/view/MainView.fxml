@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
-	
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ilpider.Darts.DartsDao.view.MainViewController">
-	<!-- TODO Add Nodes -->
+
+
+<AnchorPane prefHeight="190.0" prefWidth="562.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="org.ilpider.Darts.DartsDao.view.MainViewController">
+   <children>
+      <HBox layoutX="-100.0" layoutY="-50.0" prefHeight="100.0" prefWidth="200.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="190.0" prefWidth="173.0">
+               <children>
+                  <RadioButton mnemonicParsing="false" text="RadioButton" />
+                  <RadioButton mnemonicParsing="false" text="RadioButton" />
+                  <RadioButton mnemonicParsing="false" text="RadioButton" />
+               </children>
+            </VBox>
+            <ComboBox fx:id="cbGiocatore" editable="true" onAction="#doSeleziona" prefWidth="150.0" promptText="Seleziona il nome" />
+            <Button fx:id="btnDo" mnemonicParsing="false" onAction="#doButton" text="Button" />
+            <TextArea fx:id="txtArea" prefHeight="200.0" prefWidth="100.0" />
+            <ImageView fitHeight="187.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </HBox>
+   </children>
 </AnchorPane>
