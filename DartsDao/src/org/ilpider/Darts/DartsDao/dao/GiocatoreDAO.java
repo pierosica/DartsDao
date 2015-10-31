@@ -93,4 +93,37 @@ public class GiocatoreDAO {
 		}
 
 	}
+
+	/**
+	 * Restituisce TRUE se nel database esiste gia' un giocatore che ha il nome
+	 * di quello che sta verificando se inserire o no.
+	 * 
+	 * @param g
+	 *            E' il giocatore da verificare se e' gia' presente nel database
+	 * @return TRUE se esiste un record che ha lo stesso nome, FALSE se invece
+	 *         non lo trova
+	 */
+	public boolean esisteNomeGiocatore(String nome) {
+
+		Connection conn = DBConnect.getConnection();
+		String query = "SELECT * from `tblgiocatori` where `nome` = " + nome;
+
+		try {
+			Statement st1 = conn.createStatement();
+			ResultSet rs1 = st1.executeQuery(query);
+
+			if (rs1.next()) {
+				conn.close();
+				return true;
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return false;
+		}
+		return false;
+
+	}
+
 }
